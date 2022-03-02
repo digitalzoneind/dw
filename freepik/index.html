@@ -13,11 +13,13 @@
     <h1>Download Freepik License - Digitalpanel</h1>
   </main>
   <script>
-    const url_download = '';
-    const search = new URLSearchParams(document.location.search);
-    const id = search.get('id');
-    if (id == null) window.location.href = 'https://app.digitalpanel.id/';
-    window.location.href = `https://fpk.dgzn.workers.dev/${id}`;
+    (() => {
+      const url_download = '';
+      const search = new URLSearchParams(document.location.search);
+      const id = search.get('id');
+      if (id == null) return window.location.href = 'https://app.digitalpanel.id/';
+      window.location.href = `https://fpk.dgzn.workers.dev/${id}`;
+    })();
   </script>
 </body>
 
